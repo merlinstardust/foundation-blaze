@@ -1,0 +1,11 @@
+<template name="FoundationBase">
+  {{#if this}}
+    {{> Template.contentBlock}}
+  {{else}}
+    {{#if Template.elseBlock}}
+      {{> Template.elseBlock}}
+    {{else}}
+      No data provided.
+    {{/if}}
+  {{/if}}
+</template>
