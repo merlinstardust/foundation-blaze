@@ -1,0 +1,16 @@
+<template name="zfRevealModal">
+  {{#zfBase dataAttribute='reveal'}}
+    <div class="reveal {{classes}}" id="{{id}}" {{attributes}} data-reveal>
+      {{> Template.contentBlock}}
+      {{> zfCloseX}}
+    </div>
+  {{/zfBase}}
+</template>
+
+<template name="zfRevealLink">
+  <a class="{{classes}}" data-open="{{id}}">{{text}}</a>
+</template>
+
+<template name="zfRevealButton">
+  <a class="{{classes}} button" data-open="{{id}}">{{text}}</a>
+</template>

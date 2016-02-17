@@ -1,4 +1,4 @@
-Template.FoundationBase.onCreated(function () {
+Template.zfBase.onCreated(function () {
   var instance = this;
   var dataAttribute = instance.data.dataAttribute;
   instance.selector = '[data-' + dataAttribute + ']';
@@ -6,7 +6,7 @@ Template.FoundationBase.onCreated(function () {
   console.log('Rendering', instance.pluginName);
 });
 
-Template.FoundationBase.onRendered(function () {
+Template.zfBase.onRendered(function () {
   var instance = this;
   var pluginName = instance.pluginName;
   var element = instance.$(instance.selector);
@@ -14,7 +14,7 @@ Template.FoundationBase.onRendered(function () {
   instance.component = new Foundation[pluginName](element, options);
 });
 
-Template.FoundationBase.onDestroyed(function () {
+Template.zfBase.onDestroyed(function () {
   var instance = this;
   if (instance.component) {
     instance.component.destroy();

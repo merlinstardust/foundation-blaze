@@ -1,7 +1,7 @@
 Package.describe({
   name: 'merlin:foundation-blaze',
-  version: '0.0.1',
-  summary: 'Blaze wrappers for Foundation Components',
+  version: '0.0.2',
+  summary: 'Blaze wrappers for Zurb Foundation Components',
   git: 'https://github.com/merlinpatt/meteor-foundation-blaze',
   documentation: 'README.md'
 });
@@ -23,7 +23,10 @@ Package.onUse(function(api) {
     'client/stylesheets/main.scss',
     'client/_base.html',
     'client/_base.js',
+    'client/close_button.html',
     'client/dropdown.html',
     'client/dropdown.js',
+    'client/reveal.html',
+    'client/reveal.js',
   ], 'client');
 });

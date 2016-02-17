@@ -1,8 +1,8 @@
-<template name="FoundationDropdown">
-  {{#FoundationBase dataAttribute='dropdown'}}
-    <button class="dropdown button {{buttonClasses}}" type="button" data-toggle="{{id}}">Hoverable Dropdown</button>
-    <div class="dropdown-pane {{paneClasses}}" id="{{id}}" {{attrs}} data-dropdown>
+<template name="zfDropdown">
+  {{#zfBase dataAttribute='dropdown'}}
+    <button class="dropdown button {{buttonClasses}}" type="button" data-toggle="{{id}}">{{text}}</button>
+    <div class="dropdown-pane {{paneClasses}}" id="{{id}}" {{attributes}} data-dropdown>
       {{> Template.contentBlock}}
     </div>
-  {{/FoundationBase}}
+  {{/zfBase}}
 </template>

@@ -1,18 +1,13 @@
-Template.FoundationDropdown.onCreated(function () {
-  var instance = this;
-  instance.hover = instance.data.hover;
-  instance.autoFocus = instance.data.autoFocus;
-});
-
-Template.FoundationDropdown.helpers({
-  attrs: function () {
-    var attrs = {};
-    if (Template.instance().hover) {
-      attrs['data-hover'] = true;
+Template.zfDropdown.helpers({
+  attributes: function () {
+    var attributes = {};
+    var data = Template.instance().data;
+    if (data.hover) {
+      attributes['data-hover'] = true;
     }
-    if (Template.instance().autoFocus) {
-      attrs['data-auto-focus'] = true;
+    if (data.autoFocus) {
+      attributes['data-auto-focus'] = true;
     }
-    return attrs;
+    return attributes;
   },
 });
