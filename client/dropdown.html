@@ -1,5 +1,5 @@
 <template name="zfDropdown">
-  {{#zfBase dataAttribute='dropdown'}}
+  {{#zfBase extendContext dataAttribute='dropdown'}}
     <button class="dropdown button {{buttonClasses}}" type="button" data-toggle="{{id}}">{{text}}</button>
     <div class="dropdown-pane {{paneClasses}}" id="{{id}}" {{attributes}} data-dropdown>
       {{> Template.contentBlock}}

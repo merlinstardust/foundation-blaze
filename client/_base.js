@@ -3,7 +3,10 @@ Template.zfBase.onCreated(function () {
   var dataAttribute = instance.data.dataAttribute;
   instance.selector = '[data-' + dataAttribute + ']';
   instance.pluginName = _.map(dataAttribute.split('-'), _.capitalize).join('');
-  console.log('Rendering', instance.pluginName);
+
+  if (Meteor.settings.public.debug) {
+    console.log('Creating', instance.pluginName, 'with data', instance.data);
+  }
 });
 
 Template.zfBase.onRendered(function () {
