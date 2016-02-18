@@ -6,9 +6,11 @@ Blaze wrappers for Foundation Components
     * Close Button
   * Containers
     * Dropdown
+  * Media
+    * Progress Bar
+    * Tooltip
   * To Dos
     * Controls
-      * Close Button
       * Slider
       * Switch
     * Navigation
@@ -26,8 +28,6 @@ Blaze wrappers for Foundation Components
       * Tabs
     * Media
       * Orbit
-      * Progress Bar
-      * Tooltip
 
 ## Controls
 
@@ -42,7 +42,7 @@ Blaze wrappers for Foundation Components
 ### Dropdown
 
 ```
-{{#zfDropdown id='id' hover=false autoFocus=true buttonClasses='' paneClasses=''}}
+{{#zfDropdown id='id' hover=false autoFocus=true buttonClasses='' paneClasses='' options=''}}
   Content
 {{/zfDropdown}}
 ```
@@ -52,7 +52,23 @@ Blaze wrappers for Foundation Components
 ```
 {{> zfRevealLink id='id' classes='' text=''}}
 {{> zfRevealButton id='id' classes='' text=''}}
-{{#zfRevealModal id='id' classes=''}}
+{{#zfRevealModal id='id' classes='' options=''}}
   Content
 {{/zfRevealModal}}
+```
+
+## Media
+
+### Progress Bar
+
+```
+{{> zfProgressBar progress=50 classes=''}}
+```
+
+### Tooltip
+
+```
+{{#zfTooltip title='title' classes='' options=''}}
+  Content
+{{/zfTooltip}}
 ```
