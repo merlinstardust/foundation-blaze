@@ -2,24 +2,40 @@ Template.zfBase.onCreated(function () {
   var instance = this;
   var dataAttribute = instance.data.dataAttribute;
   instance.selector = '[data-' + dataAttribute + ']';
-  instance.pluginName = _.map(dataAttribute.split('-'), _.capitalize).join('');
+  instance.componentName = dataAttribute.split('-').map(capitalize).join('');
 
   if (Meteor.settings.public.debug) {
-    console.log('Creating', instance.pluginName, 'with data', instance.data);
+    console.log('Created', instance.componentName, 'with ID', instance.data.id, 'and data', instance.data);
   }
 });
 
 Template.zfBase.onRendered(function () {
   var instance = this;
-  var pluginName = instance.pluginName;
+  var componentName = instance.componentName;
   var element = instance.$(instance.selector);
   var options = instance.options || {};
-  instance.component = new Foundation[pluginName](element, options);
+
+  if (! instance[componentName.toLowerCase()]) {
+    instance[componentName.toLowerCase()] = new Foundation[componentName](element, options);
+
+    if (Meteor.settings.public.debug) {
+      console.log('Rendered', instance.componentName, 'with element', element, 'and options', options);
+    }
+  }
 });
 
 Template.zfBase.onDestroyed(function () {
   var instance = this;
-  if (instance.component) {
-    instance.component.destroy();
+  var component = instance[instance.componentName.toLowerCase()]
+  if (component) {
+    component.destroy();
+
+    if (Meteor.settings.public.debug) {
+      console.log('Destroyed', instance.componentName, 'with ID', instance.data.id);
+    }
   }
 });
+
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase()
+}

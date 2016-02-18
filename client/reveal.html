@@ -1,6 +1,6 @@
 <template name="zfRevealModal">
   {{#zfBase extendContext dataAttribute='reveal'}}
-    <div class="reveal {{classes}}" id="{{id}}" {{attributes}} data-reveal>
+    <div class="reveal {{classes}}" id="{{id}}" {{attributes}} data-options="{{options}}" data-reveal>
       {{> Template.contentBlock}}
       {{> zfCloseX}}
     </div>
