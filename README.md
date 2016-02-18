@@ -6,6 +6,7 @@ Blaze wrappers for Foundation Components
     * Close Button
   * Containers
     * Dropdown
+    * Reveal
   * Media
     * Progress Bar
     * Tooltip
@@ -23,7 +24,6 @@ Blaze wrappers for Foundation Components
     * Containers
       * Accordion
       * Off-canvas
-      * Reveal
       * Table
       * Tabs
     * Media
@@ -52,6 +52,14 @@ Blaze wrappers for Foundation Components
 ```
 {{> zfRevealLink id='id' classes='' text=''}}
 {{> zfRevealButton id='id' classes='' text=''}}
+
+{{#zfRevealLinkBlock id='id' classes='' text=''}}
+  Content
+{{/zfRevealLinkBlock}}
+{{#zfRevealButtonBlock id='id' classes='' text=''}}
+  Content
+{{/zfRevealButtonBlock}}
+
 {{#zfRevealModal id='id' classes='' options=''}}
   Content
 {{/zfRevealModal}}
@@ -68,7 +76,7 @@ Blaze wrappers for Foundation Components
 ### Tooltip
 
 ```
-{{#zfTooltip title='title' classes='' options=''}}
+{{#zfTooltip tip='tip' classes='' options=''}}
   Content
 {{/zfTooltip}}
 ```

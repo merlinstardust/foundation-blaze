@@ -14,3 +14,11 @@
 <template name="zfRevealButton">
   <a class="{{classes}} button" data-open="{{id}}">{{text}}</a>
 </template>
+
+<template name="zfRevealLinkBlock">
+  <a class="{{classes}}" data-open="{{id}}">{{> Template.contentBlock}}</a>
+</template>
+
+<template name="zfRevealButtonBlock">
+  <a class="{{classes}} button" data-open="{{id}}">{{> Template.contentBlock}}</a>
+</template>

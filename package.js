@@ -1,6 +1,6 @@
 Package.describe({
   name: 'merlin:foundation-blaze',
-  version: '0.0.4',
+  version: '0.0.5',
   summary: 'Blaze wrappers for Zurb Foundation Components',
   git: 'https://github.com/merlinpatt/foundation-blaze',
   documentation: 'README.md'
