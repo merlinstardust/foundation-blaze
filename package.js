@@ -1,9 +1,9 @@
 Package.describe({
   name: 'merlin:foundation-blaze',
-  version: '0.0.5',
+  version: '0.0.6',
   summary: 'Blaze wrappers for Zurb Foundation Components',
   git: 'https://github.com/merlinpatt/foundation-blaze',
-  documentation: 'README.md'
+  documentation: 'README.md',
 });
 
 Package.onUse(function(api) {
@@ -15,15 +15,18 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'client/lib/helpers.js',
-    'client/_base.html',
-    'client/_base.js',
 
     'client/close_button.html',
     'client/progress_bar.html',
+    'client/switch.html',
+
     'client/dropdown.html',
     'client/dropdown.js',
+
     'client/reveal.html',
     'client/reveal.js',
+
     'client/tooltip.html',
+    'client/tooltip.js'
   ], 'client');
 });

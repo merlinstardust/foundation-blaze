@@ -1,0 +1,22 @@
+<template name="zfSwitch">
+  <div class="switch {{classes}}">
+    <input class="switch-input" id="{{id}}"
+      type="{{#if type}}{{type}}{{else}}checkbox{{/if}}"
+      name="{{#if name}}{{name}}{{else}}{{id}}{{/if}}">
+    <label class="switch-paddle" for="{{id}}">
+      {{#if srText}}
+        <span class="show-for-sr">{{srText}}</span>
+      {{/if}}
+      {{#if onText}}
+        <span class="switch-active" aria-hidden="true">{{onText}}</span>
+      {{/if}}
+      {{#if offText}}
+        <span class="switch-inactive" aria-hidden="true">{{offText}}</span>
+      {{/if}}
+    </label>
+  </div>
+</template>
+
+<template name="zfSwitchRadio">
+  {{> zfSwitch extendContext type='radio'}}
+</template>

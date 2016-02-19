@@ -4,6 +4,7 @@ Blaze wrappers for Foundation Components
 ## Table of Contents
   * Controls
     * Close Button
+    * Switch
   * Containers
     * Dropdown
     * Reveal
@@ -13,7 +14,6 @@ Blaze wrappers for Foundation Components
   * To Dos
     * Controls
       * Slider
-      * Switch
     * Navigation
       * Dropdown Menu
       * Drilldown Menu
@@ -37,12 +37,19 @@ Blaze wrappers for Foundation Components
 {{> zfCloseX}}
 ```
 
+### Switch
+
+```
+{{> zfSwitch id='id' name='' classes='' srText='' onText='' offText=''}}
+{{> zfSwitchRadio id='id' name='' classes='' srText='' onText='' offText=''}}
+```
+
 ## Containers
 
 ### Dropdown
 
 ```
-{{#zfDropdown id='id' hover=false autoFocus=true buttonClasses='' paneClasses='' options=''}}
+{{#zfDropdown id='id' hover=false autoFocus=false buttonClasses='' paneClasses='' options=''}}
   Content
 {{/zfDropdown}}
 ```
