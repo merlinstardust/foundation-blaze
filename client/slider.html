@@ -1,0 +1,20 @@
+<template name="zfSlider">
+  <div class="{{classes}} slider {{#if vertical}}vertical{{/if}} {{#if disabled}}disabled{{/if}}"
+    {{attributes}} data-slider>
+    <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="{{#if lInput}}{{lInput}}{{else}}{{input}}{{/if}}"></span>
+    <span class="slider-fill" data-slider-fill></span>
+    {{#unless lInput}}
+      <input type="hidden" name="{{#if lName}}{{lName}}{{else}}{{name}}{{/if}}">
+    {{/unless}}
+    {{#if rStart}}
+      <span class="slider-handle" data-slider-handle role="slider" tabindex="1" aria-controls="{{rInput}}"></span>
+      {{#unless rInput}}
+        <input type="hidden" name="{{rName}}">
+      {{/unless}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="zfSliderInput">
+  <input id="{{id}}" type="number">
+</template>

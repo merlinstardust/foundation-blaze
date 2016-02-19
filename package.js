@@ -1,6 +1,6 @@
 Package.describe({
   name: 'merlin:foundation-blaze',
-  version: '0.0.6',
+  version: '0.0.7',
   summary: 'Blaze wrappers for Zurb Foundation Components',
   git: 'https://github.com/merlinpatt/foundation-blaze',
   documentation: 'README.md',
@@ -25,6 +25,9 @@ Package.onUse(function(api) {
 
     'client/reveal.html',
     'client/reveal.js',
+
+    'client/slider.html',
+    'client/slider.js',
 
     'client/tooltip.html',
     'client/tooltip.js'
