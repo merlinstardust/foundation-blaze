@@ -1,20 +1,6 @@
-Template.zfDropdown.helpers({
-  attributes: function () {
-    var attributes = {};
-    var data = Template.instance().data;
-    if (data.hover) {
-      attributes['data-hover'] = true;
-    }
-    if (data.autoFocus) {
-      attributes['data-auto-focus'] = true;
-    }
-    return attributes;
-  },
-});
-
-Template.zfDropdown.onCreated(function () {
+Template.zfTooltip.onCreated(function () {
   var instance = this;
-  var dataAttribute = 'dropdown';
+  var dataAttribute = 'tooltip';
   instance.selector = '[data-' + dataAttribute + ']';
   instance.componentName = dataAttribute.split('-').map(capitalize).join('');
 
@@ -23,7 +9,7 @@ Template.zfDropdown.onCreated(function () {
   }
 });
 
-Template.zfDropdown.onRendered(function () {
+Template.zfTooltip.onRendered(function () {
   var instance = this;
   var componentName = instance.componentName;
   var element = instance.$(instance.selector);
@@ -38,7 +24,7 @@ Template.zfDropdown.onRendered(function () {
   }
 });
 
-Template.zfDropdown.onDestroyed(function () {
+Template.zfTooltip.onDestroyed(function () {
   var instance = this;
   var component = instance[instance.componentName.toLowerCase()];
   if (component) {

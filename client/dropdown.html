@@ -1,10 +1,8 @@
 <template name="zfDropdown">
-  {{#zfBase extendContext dataAttribute='dropdown'}}
-    <button class="dropdown button {{buttonClasses}}" type="button" data-toggle="{{id}}" data-options="{{options}}">
-      {{text}}
-    </button>
-    <div class="dropdown-pane {{paneClasses}}" id="{{id}}" {{attributes}} data-dropdown>
-      {{> Template.contentBlock}}
-    </div>
-  {{/zfBase}}
+  <button class="dropdown button {{buttonClasses}}" type="button" data-toggle="{{id}}" data-options="{{options}}">
+    {{text}}
+  </button>
+  <div class="dropdown-pane {{paneClasses}}" id="{{id}}" {{attributes}} data-dropdown>
+    {{> Template.contentBlock}}
+  </div>
 </template>

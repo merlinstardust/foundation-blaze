@@ -1,3 +1,4 @@
+
 Template.registerHelper('extendContext', function (data) {
   var result = _.clone(this);
   if (data) {
@@ -7,3 +8,7 @@ Template.registerHelper('extendContext', function (data) {
   }
   return result;
 });
+
+capitalize = function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+}

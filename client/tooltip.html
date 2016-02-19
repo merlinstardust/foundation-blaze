@@ -1,7 +1,5 @@
 <template name="zfTooltip">
-  {{#zfBase extendContext dataAttribute='tooltip'}}
-    <span aria-haspopup="true" class="has-tip {{classes}}" title="{{tip}}" data-show-on="all" data-options="{{options}}" data-tooltip>
-      {{> Template.contentBlock}}
-    </span>
-  {{/zfBase}}
+  <span aria-haspopup="true" class="has-tip {{classes}}" id="{{id}}" title="{{tip}}" data-show-on="all" data-options="{{options}}" data-tooltip>
+    {{> Template.contentBlock}}
+  </span>
 </template>
