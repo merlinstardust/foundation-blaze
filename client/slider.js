@@ -10,11 +10,11 @@ Template.zfSlider.helpers({
     }
 
 
-    if (data.leftStart) {
-      attributes['data-initial-start'] = data.leftStart;
+    if (data.lStart) {
+      attributes['data-initial-start'] = data.lStart;
     }
-    if (data.rightStart) {
-      attributes['data-initial-end'] = data.rightStart;
+    if (data.rStart) {
+      attributes['data-initial-end'] = data.rStart;
     }
 
     if (data.vertical) {
