@@ -1,6 +1,6 @@
 Package.describe({
   name: 'merlin:foundation-blaze',
-  version: '0.0.9',
+  version: '0.1.0',
   summary: 'Blaze wrappers for Zurb Foundation Components',
   git: 'https://github.com/merlinpatt/foundation-blaze',
   documentation: 'README.md',
@@ -22,6 +22,9 @@ Package.onUse(function(api) {
 
     'client/dropdown.html',
     'client/dropdown.js',
+
+    'client/dropdown_menu.html',
+    'client/dropdown_menu.js',
 
     'client/orbit.html',
     'client/orbit.js',
