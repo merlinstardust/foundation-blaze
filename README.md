@@ -10,10 +10,10 @@ Blaze wrappers for Foundation Components
     * Dropdown
     * Reveal
   * Media
+    * Orbit
     * Progress Bar
     * Tooltip
   * To Dos
-    * Controls
     * Navigation
       * Dropdown Menu
       * Drilldown Menu
@@ -26,8 +26,6 @@ Blaze wrappers for Foundation Components
       * Off-canvas
       * Table
       * Tabs
-    * Media
-      * Orbit
 
 ## Controls
 
@@ -85,6 +83,12 @@ Blaze wrappers for Foundation Components
 ```
 
 ## Media
+
+### Orbit
+
+```
+{{> zfOrbit slides=slides template='Slide'}}
+```
 
 ### Progress Bar
 
